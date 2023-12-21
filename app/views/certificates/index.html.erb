@@ -1,110 +1,104 @@
-<h1>Diplômes Low Tech</h1>
+<h1>Pour les solutions low tech, contre les blockchains inutiles</h1>
 
-<div class="row">
-  <div class="col-lg-5 col-md-8">
-    <h2>Le contexte</h2>
-    <p>
-    Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
-    </p>
-    <%= image_tag 'linkedin.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-    Dans les commentaires, je me suis attristé à l'idée que de l'argent public soit dépensé pour mettre en place une solution à base de blockchain afin que des Universités puissent partager des diplômes certifiés.
-    Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
-    </p>
-    
-    <h2>Le problème</h2>
-    <p>
-      La blockchain est une solution technique permettant, en théorie, de créer de la confiance dans un contexte de défiance généralisé.
-      Mais dans la pratique, la blockchain ne permet pas de créer cette confiance, elle est uniquement mise en œuvre pour obtenir des subventions publiques et des fonds privés.
-    </p>
-    <%= image_tag 'with-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Dans cette première étape, il s'agit simplement d'une page Web.
-    </p>
-    <%= image_tag 'with-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Quand on clique sur "Preuves", un volet s'ouvre et nous indique que le certificat est valide, et fournit des liens vers des adresses blockchain permettant de le vérifier.
-    </p>
-    <%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Mais quand on clique sur ces supposées preuves, l'interface ne permet pas de vérifier quoi que ce soit sans être développeur ou développeuse.
-    </p>
-    
-    <h2>Le démonstrateur</h2>
-    <p>
-      L'application Web sur laquelle vous lisez ce texte a été développée en 2 heures le 21 décembre.
-      Elle s'appuie sur une base PostgreSQL avec une seule table.
-      Le code HTML, CSS et JS du diplôme "sécurisé" a été simplement copié-collé.
-      Les textes ont été changés afin de se connecter aux données de la base, et mentionner qu'il s'agit d'un non-certificat.
-      L'application tourne sur un conteneur Web taille "S" chez <a href="https://scalingo.com" target="_blank">Scalingo</a>, avec une base de données PostgreSQL gratuite limitée à 256 Mo. 
-      Tout est hébergé en France.
-      C'est une application absolument basique.
-    </p>
-    <%= image_tag 'without-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Dans cette première étape, la page Web ressemble en tous points à l'original, avec les mêmes "garanties d'authenticité".
-      Seul le texte est modifié par mes soins afin d'éviter l'utilisation de faux diplômes.
-    </p>
-    <%= image_tag 'without-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Quand on clique sur "Preuves", le volet est absolument identique.
-    </p>
-    <%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Quand on clique sur les supposées preuves, l'interface ne permet toujours pas de vérifier quoi que ce soit sans être développeur ou développeuse.
-      La blockchain est totalement inutile au grand public.
-    </p>
-    
+<h2>Expérimenter</h2>
+<%= link_to "Voir un non-certificat", Certificate.first, class: 'btn btn-primary mb-3' %>
+<%= link_to "Créer un non-certificat", new_certificate_path, class: 'btn btn-primary mb-3' %>
 
-    <h2>La solution</h2>
-    <p>
-      La confiance provient de deux mécanismes : l'État et les noms de domaines. 
-      L'État, parce que c'est la base de la loi.
-      Les noms de domaines, parce qu'ils permettent de s'assurer de l'identité d'une personne.
-      L'Université de Lille le sait très bien, comme on le voit dans la capture d'écran ci-dessous, issue de <a href="https://www.univ-lille.fr/formation/diplomation" target="_blank">la page détaillant la diplomation</a>.
-      Le nom de domaine est le premier critère d'authenticité. 
-    </p>
-    <%= image_tag 'authenticite.png', class: 'img-fluid img-thumbnail' %>
-    <p>
-      Les Universités n'ont pas besoin de gadgets technologiques pour êtres des tiers de confiance.
-      Il suffit de s'appuyer sur leur nom de domaine.
-      Cela permet de déployer des solutions de (relativement) basse intensité technologique.
-    </p>
+<h2>Le contexte</h2>
+<p>
+Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
+</p>
+<%= image_tag 'linkedin.png', class: 'img-fluid img-thumbnail' %>
+<p>
+Dans les commentaires, je me suis attristé à l'idée que de l'argent public soit dépensé pour mettre en place une solution à base de blockchain afin que des Universités puissent partager des diplômes certifiés.
+Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
+</p>
 
-    <h2>Et après ?</h2>
-    
-    <p>
-      Il serait bon d'arrêter de financer tous ces projets inutiles sur de la blockchain, ça ne rime à rien dans la plupart des cas. 
-      En revanche, augmenter les budgets des Universités et financer une recherche libre serait extrêmement souhaitable.
-      Ainsi que démarrer la discussion démocratique sur la technique qui permettrait de faire atterrir le numérique, à l'Université comme ailleurs, en dénumérisant.
-    </p>
+<h2>Le problème</h2>
+<p>
+  La blockchain est une solution technique permettant, en théorie, de créer de la confiance dans un contexte de défiance généralisé.
+  Mais dans la pratique, la blockchain ne permet pas de créer cette confiance, elle est uniquement mise en œuvre pour obtenir des subventions publiques et des fonds privés.
+</p>
+<%= image_tag 'with-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Dans cette première étape, il s'agit simplement d'une page Web.
+</p>
+<%= image_tag 'with-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Quand on clique sur "Preuves", un volet s'ouvre et nous indique que le certificat est valide, et fournit des liens vers des adresses blockchain permettant de le vérifier.
+</p>
+<%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Mais quand on clique sur ces supposées preuves, l'interface ne permet pas de vérifier quoi que ce soit sans être développeur ou développeuse.
+</p>
 
-    <h2>Sources</h2>
-    <ul class="list-unstyled">
-      <li><a href="https://github.com/arnaudlevy/lowtechdiploma" target="_blank">github.com/arnaudlevy/lowtechdiploma</a></li>
-      <li><a href="https://www.editionsdivergences.com/livre/no-crypto-ideologie-et-populisme-au-royaume-des-cryptomonnaies" target="_blank">No Crypto. Comment Bitcoin a envoûté la planète. (Nastasia Hadjadji)</a></li>
-      <li><a href="https://journals.openedition.org/terminal/9059" target="_blank">Promesses et (dés)illusions, Une introduction technocritique aux blockchains (Pablo Rauzy)</a></li>
-      <li><a href="https://publications.arnaudlevy.com/actualites/2021-05-28-qui-verdira-la-blockchain/" target="_blank">Qui verdira la blockchain? (Arnaud Levy)</a></li>
-      <li><a href="https://publications.arnaudlevy.com/actualites/2019-09-05-qui-detruira-la-blockchain/" target="_blank">Qui détruira la blockchain? (Arnaud Levy)</a></li>
-      <li><a href="https://publications.arnaudlevy.com/actualites/2023-08-07-il-faut-denumeriser-lecole/" target="_blank">Il faut dénumériser l’école (Arnaud Levy)</a></li>
-    </ul>
+<h2>Le démonstrateur</h2>
+<p>
+  L'application Web sur laquelle vous lisez ce texte a été développée en 2 heures le 21 décembre.
+  Elle s'appuie sur une base PostgreSQL avec une seule table.
+  Le code HTML, CSS et JS du diplôme "sécurisé" a été simplement copié-collé.
+  Les textes ont été changés afin de se connecter aux données de la base, et mentionner qu'il s'agit d'un non-certificat.
+  L'application tourne sur un conteneur Web taille "S" chez <a href="https://scalingo.com" target="_blank">Scalingo</a>, avec une base de données PostgreSQL gratuite limitée à 256 Mo. 
+  Tout est hébergé en France.
+  C'est une application absolument basique.
+</p>
+<%= image_tag 'without-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Dans cette première étape, la page Web ressemble en tous points à l'original, avec les mêmes "garanties d'authenticité".
+  Seul le texte est modifié par mes soins afin d'éviter l'utilisation de faux diplômes.
+</p>
+<%= image_tag 'without-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Quand on clique sur "Preuves", le volet est absolument identique.
+</p>
+<%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Quand on clique sur les supposées preuves, l'interface ne permet toujours pas de vérifier quoi que ce soit sans être développeur ou développeuse.
+  La blockchain est totalement inutile au grand public.
+</p>
 
-    <hr class="my-5">
-    
-    <h2 class="h5">Arnaud Levy</h2>
-    <p class="small">
-      Co-fondateur de la coopérative noesya, développeur. 
-      Maître de conférences associé et directeur des études du Bachelor Universitaire de Technologie (BUT) Métiers du Multimédia et de l'Internet (MMI) à l'Université Bordeaux Montaigne. 
-      Chercheur associé au laboratoire de recherche MICA. 
-      Référent Approche par Compétences (APC) auprès de l’ADIUT.
-    </p>
-    
-    <hr class="my-5">
 
-  </div>
-  <div class="offset-lg-1 col-lg-4 col-md-4">
-    <h2>Expérimenter</h2>
-    <%= link_to "Voir un non-certificat", Certificate.first, class: 'btn btn-primary mb-3' %>
-    <%= link_to "Créer un non-certificat", new_certificate_path, class: 'btn btn-primary mb-3' %>
-  </div>
-</div>
+<h2>La solution</h2>
+<p>
+  La confiance provient de deux mécanismes : l'État et les noms de domaines. 
+  L'État, parce que c'est la base de la loi.
+  Les noms de domaines, parce qu'ils permettent de s'assurer de l'identité d'une personne.
+  L'Université de Lille le sait très bien, comme on le voit dans la capture d'écran ci-dessous, issue de <a href="https://www.univ-lille.fr/formation/diplomation" target="_blank">la page détaillant la diplomation</a>.
+  Le nom de domaine est le premier critère d'authenticité. 
+</p>
+<%= image_tag 'authenticite.png', class: 'img-fluid img-thumbnail' %>
+<p>
+  Les Universités n'ont pas besoin de gadgets technologiques pour êtres des tiers de confiance.
+  Il suffit de s'appuyer sur leur nom de domaine.
+  Cela permet de déployer des solutions de (relativement) basse intensité technologique.
+</p>
+
+<h2>Et après ?</h2>
+
+<p>
+  Il serait bon d'arrêter de financer tous ces projets inutiles sur de la blockchain, ça ne rime à rien dans la plupart des cas. 
+  En revanche, augmenter les budgets des Universités et financer une recherche libre serait extrêmement souhaitable.
+  Ainsi que démarrer la discussion démocratique sur la technique qui permettrait de faire atterrir le numérique, à l'Université comme ailleurs, en dénumérisant.
+</p>
+
+<h2>Sources</h2>
+<ul class="list-unstyled">
+  <li><a href="https://github.com/arnaudlevy/lowtechdiploma" target="_blank">github.com/arnaudlevy/lowtechdiploma</a></li>
+  <li><a href="https://www.editionsdivergences.com/livre/no-crypto-ideologie-et-populisme-au-royaume-des-cryptomonnaies" target="_blank">No Crypto. Comment Bitcoin a envoûté la planète. (Nastasia Hadjadji)</a></li>
+  <li><a href="https://journals.openedition.org/terminal/9059" target="_blank">Promesses et (dés)illusions, Une introduction technocritique aux blockchains (Pablo Rauzy)</a></li>
+  <li><a href="https://publications.arnaudlevy.com/actualites/2021-05-28-qui-verdira-la-blockchain/" target="_blank">Qui verdira la blockchain? (Arnaud Levy)</a></li>
+  <li><a href="https://publications.arnaudlevy.com/actualites/2019-09-05-qui-detruira-la-blockchain/" target="_blank">Qui détruira la blockchain? (Arnaud Levy)</a></li>
+  <li><a href="https://publications.arnaudlevy.com/actualites/2023-08-07-il-faut-denumeriser-lecole/" target="_blank">Il faut dénumériser l’école (Arnaud Levy)</a></li>
+</ul>
+
+<hr class="my-5">
+
+<h2 class="h5">Arnaud Levy</h2>
+<p class="small">
+  Co-fondateur de la coopérative noesya, développeur. 
+  Maître de conférences associé et directeur des études du Bachelor Universitaire de Technologie (BUT) Métiers du Multimédia et de l'Internet (MMI) à l'Université Bordeaux Montaigne. 
+  Chercheur associé au laboratoire de recherche MICA. 
+  Référent Approche par Compétences (APC) auprès de l’ADIUT.
+</p>
+
+<hr class="my-5">
