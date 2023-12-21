@@ -6,30 +6,38 @@
 
 <h2>Le contexte</h2>
 <p>
-Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
+  Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
 </p>
 <%= image_tag 'linkedin.png', class: 'img-fluid img-thumbnail' %>
 <p>
-Dans les commentaires, je me suis attristé à l'idée que de l'argent public soit dépensé pour mettre en place une solution à base de blockchain afin que des Universités puissent partager des diplômes certifiés.
-Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
+  Dans les commentaires, je me suis attristé à l'idée que de l'argent public soit dépensé pour mettre en place une solution à base de blockchain afin que des Universités puissent partager des diplômes certifiés.
+</p>
+<blockquote class="blockquote">
+  Ça me laisse rêveur d’imaginer qu’une Université et un État puissent ressentir le besoin de déployer une technologie de blockchain pour attester des diplômes et certificats délivrés. C’est un immense gâchis financier et écologique. Le technosolutionnisme stimulé par les appels à projets est un énorme problème, qui fait d’énormes dégâts à l’Université et ailleurs.
+</blockquote>
+<p>
+  Le propos semble difficile à comprendre techniqumement, et à accepter.
+  Ce démonstrateur a pour objectif de le rendre aussi clair que possible.
 </p>
 
 <h2>Le problème</h2>
 <p>
   La blockchain est une solution technique permettant, en théorie, de créer de la confiance dans un contexte de défiance généralisé.
   Mais dans la pratique, la blockchain ne permet pas de créer cette confiance, elle est uniquement mise en œuvre pour obtenir des subventions publiques et des fonds privés.
+  Observons de façon concrète le système présenté comme <i>moderne</i>, permettant d'assurer le caractère <i>authentique</i> des documents.
 </p>
 <%= image_tag 'with-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
 <p>
-  Dans cette première étape, il s'agit simplement <a href="https://diplome-certificat.univ-lille.fr/index.html?key=FD586F8653AF1C95B49D8572D80DC3423AD0A5254DCB124B3ACF6BF06C2C98C8L3ptVmpMQU4xMytIODI4Zm15Rnc3WXZQdWNzcEVpanhEREV3dVpDRUNCNXBhQThB" target="_blank">d'une page Web</a>.
+  Dans cette première étape, il s'agit simplement <a href="https://diplome-certificat.univ-lille.fr/index.html?key=FD586F8653AF1C95B49D8572D80DC3423AD0A5254DCB124B3ACF6BF06C2C98C8L3ptVmpMQU4xMytIODI4Zm15Rnc3WXZQdWNzcEVpanhEREV3dVpDRUNCNXBhQThB" target="_blank">d'une page Web</a>, sur le domaine "diplome-certificat.univ-lille.fr".
 </p>
 <%= image_tag 'with-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
 <p>
-  Quand on clique sur "Preuves", un volet s'ouvre et nous indique que le certificat est valide, et fournit des liens vers des adresses blockchain permettant de le vérifier.
+  Quand on clique sur "Preuves", un volet s'ouvre et nous indique que le certificat est valide, et fournit des liens vers des adresses blockchain permettant, en principe, de le vérifier.
+  Est-ce convaincant ?
 </p>
 <%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
 <p>
-  Mais quand on clique sur ces supposées preuves, l'interface ne permet pas de vérifier quoi que ce soit sans être développeur ou développeuse.
+  Pas vraiment... Quand on clique sur le premier lien de ces supposées preuves, l'adresse blockchain avec un token (la longue chaîne de caractères), l'interface ne permet pas de vérifier quoi que ce soit sans être développeur ou développeuse.
 </p>
 
 <h2>Le démonstrateur</h2>
@@ -37,10 +45,12 @@ Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
   L'application Web sur laquelle vous lisez ce texte a été développée en 2 heures le 21 décembre.
   Elle s'appuie sur une base PostgreSQL avec une seule table.
   Le code HTML, CSS et JS du diplôme "sécurisé" a été simplement copié-collé.
-  Les textes ont été changés afin de se connecter aux données de la base, et mentionner qu'il s'agit d'un non-certificat.
+  Les textes ont été changés afin de se connecter aux données de la base et mentionner qu'il s'agit d'un non-certificat. 
+  Il ne s'agirait pas que des personnes naïves prennent ce démonstrateur pour un vrai diplôme de l'Université de Lille.
   L'application tourne sur un conteneur Web taille "S" chez <a href="https://scalingo.com" target="_blank">Scalingo</a>, avec une base de données PostgreSQL gratuite limitée à 256 Mo. 
   Tout est hébergé en France.
-  C'est une application absolument basique.
+  C'est une application absolument basique, qui ne coûte quasiment rien à fabriquer ou à faire tourner.
+  La gestion de l'échelle imposerait bien sûr une infrastructure plus grosse, mais Scalingo (ou un autre prestataire d'hébergement) pourrait assurer cela simplement.
 </p>
 <%= image_tag 'without-blockchain/certificat.png', class: 'img-fluid img-thumbnail' %>
 <p>
@@ -50,11 +60,13 @@ Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
 <%= image_tag 'without-blockchain/preuves.png', class: 'img-fluid img-thumbnail' %>
 <p>
   Quand on clique sur "Preuves", le volet est absolument identique.
+  Rassurez-vous, bonnes gens, le certificat est valide, la blockchain l'atteste !
+  Sauf que c'est totalement faux.
 </p>
 <%= image_tag 'blockchain.png', class: 'img-fluid img-thumbnail' %>
 <p>
   Quand on clique sur les supposées preuves, l'interface ne permet toujours pas de vérifier quoi que ce soit sans être développeur ou développeuse.
-  La blockchain est totalement inutile au grand public.
+  La blockchain est inutile au grand public, elle n'a pas permis de démasquer le faux certificat. 
 </p>
 
 
@@ -64,7 +76,8 @@ Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
   L'État, parce que c'est la base de la loi.
   Les noms de domaines, parce qu'ils permettent de s'assurer de l'identité d'une personne.
   L'Université de Lille le sait très bien, comme on le voit dans la capture d'écran ci-dessous, issue de <a href="https://www.univ-lille.fr/formation/diplomation" target="_blank">la page détaillant la diplomation</a>.
-  Le nom de domaine est le premier critère d'authenticité. 
+  Le nom de domaine "diplome-certificat.univ-lille.fr" est le premier critère d'authenticité.
+  En fait, c'est même le seul accessible à des néophytes. 
 </p>
 <%= image_tag 'authenticite.png', class: 'img-fluid img-thumbnail' %>
 <p>
@@ -84,6 +97,7 @@ Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
 <h2>Sources</h2>
 <ul class="list-unstyled">
   <li><a href="https://github.com/arnaudlevy/lowtechdiploma" target="_blank">github.com/arnaudlevy/lowtechdiploma</a></li>
+  <li><a href="https://www.aliceetlescryptotrolls.org/" target="_blank">Alice et les crypto-trolls (noesya + Volumique)</a></li>
   <li><a href="https://www.editionsdivergences.com/livre/no-crypto-ideologie-et-populisme-au-royaume-des-cryptomonnaies" target="_blank">No Crypto. Comment Bitcoin a envoûté la planète. (Nastasia Hadjadji)</a></li>
   <li><a href="https://journals.openedition.org/terminal/9059" target="_blank">Promesses et (dés)illusions, Une introduction technocritique aux blockchains (Pablo Rauzy)</a></li>
   <li><a href="https://publications.arnaudlevy.com/actualites/2021-05-28-qui-verdira-la-blockchain/" target="_blank">Qui verdira la blockchain? (Arnaud Levy)</a></li>
