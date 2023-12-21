@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-lg-6">
-    <h2>Comprendre le contexte</h2>
+    <h2>Le contexte</h2>
 
     <p>
     Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
@@ -27,6 +27,8 @@
       Elle s'appuie sur une base PostgreSQL avec une seule table.
       Le code HTML, CSS et JS du diplôme "sécurisé" a été simplement copié-collé.
       Les textes ont été changés afin de se connecter aux données de la base, et mentionner qu'il s'agit d'un non-certificat.
+      L'application tourne sur un conteneur Web taille "S" chez <a href="https://scalingo.com" target="_blank">Scalingo</a>, avec une base de données PostgreSQL gratuite limitée à 256 Mo. 
+      Tout est hébergé en France.
     </p>
 
     <h2>La solution</h2>
@@ -44,6 +46,20 @@
     <p>
       Les Universités n'ont pas besoin de gadgets technologiques pour êtres tiers de confiance.
       Il suffit de s'appuyer sur le nom de domaine.
+      Cela permet de déployer des solutions de (relativement) basse intensité technologique.
+    </p>
+
+    <h2>Et après ?</h2>
+    
+    <p>
+      Il serait bon d'arrêter de financer tous ces projets inutiles sur de la blockchain, ça ne rime à rien dans la plupart des cas. 
+      En revanche, augmenter les dotations de l'Université et financer une recherche libre serait extrêmement souhaitable.
+      Ainsi que démarrer la discussion démocratique sur la technique qui permettrait de faire atterrir le numérique, à l'Université comme ailleurs, en dénumérisant.
+    </p>
+
+    <p>
+      <b>Arnaud Levy</b><br>
+      Co-fondateur de la coopérative noesya, développeur. Maître de conférences associé et directeur des études du Bachelor Universitaire de Technologie (BUT) Métiers du Multimédia et de l'Internet (MMI) à l'Université Bordeaux Montaigne. Chercheur associé au laboratoire de recherche MICA. Référent Approche par Compétences (APC) auprès de l’ADIUT.
     </p>
 
     <h2>Sources</h2>
@@ -53,12 +69,13 @@
       <li><a href="https://journals.openedition.org/terminal/9059" target="_blank">Promesses et (dés)illusions, Une introduction technocritique aux blockchains (Pablo Rauzy)</a></li>
       <li><a href="https://publications.arnaudlevy.com/actualites/2021-05-28-qui-verdira-la-blockchain/" target="_blank">Qui verdira la blockchain? (Arnaud Levy)</a></li>
       <li><a href="https://publications.arnaudlevy.com/actualites/2019-09-05-qui-detruira-la-blockchain/" target="_blank">Qui détruira la blockchain? (Arnaud Levy)</a></li>
-      <li><a href="" target="_blank"></a></li>
+      <li><a href="https://publications.arnaudlevy.com/actualites/2023-08-07-il-faut-denumeriser-lecole/" target="_blank">Il faut dénumériser l’école (Arnaud Levy)</a></li>
     </ul>
 
   </div>
   <div class="col-lg-4">
     <h2>Expérimenter</h2>
+    <%= link_to "Voir un non-certificat", Certificate.first, class: 'btn btn-primary' %>
     <%= link_to "Créer un non-certificat", new_certificate_path, class: 'btn btn-primary' %>
   </div>
 </div>
