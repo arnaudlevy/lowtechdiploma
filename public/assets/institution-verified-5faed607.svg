@@ -1,0 +1,11 @@
+<svg id="institution-verified" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect id="Rectangle_7001" data-name="Rectangle 7001" width="40" height="40" fill="none"/>
+  <g id="Groupe_9043" data-name="Groupe 9043" transform="translate(-84.527 -128.926)">
+    <rect id="Rectangle_6995" data-name="Rectangle 6995" width="39.647" height="2.5" transform="translate(84.527 165.649)" fill="#00adef"/>
+    <rect id="Rectangle_6996" data-name="Rectangle 6996" width="36.148" height="2.5" transform="translate(86.277 161.671)" fill="#00adef"/>
+    <path id="Tracé_14855" data-name="Tracé 14855" d="M87.485,143.742l-1.352-2.1,18.218-11.713,18.217,11.713-1.352,2.1L104.35,132.9Z" fill="#00adef"/>
+    <rect id="Rectangle_6997" data-name="Rectangle 6997" width="2.5" height="15.979" transform="translate(90.436 143.821)" fill="#00adef"/>
+    <rect id="Rectangle_6999" data-name="Rectangle 6999" width="2.5" height="15.979" transform="translate(115.82 143.821)" fill="#00adef"/>
+  </g>
+  <path id="Tracé_14854" data-name="Tracé 14854" d="M113.134,145.589l-1.768-1.768-9.575,9.575-3.157-3.156-1.768,1.768,4.924,4.924Z" transform="translate(-84.527 -128.926)" fill="#00adef"/>
+</svg>

@@ -1,0 +1,22 @@
+fr:
+  activerecord:
+    attributes:
+      certificate:
+        name: Diplôme
+        diplom_kind: Discipline
+        diplom_mention: Mention
+        diplom_path: Parcours
+        diplom_date: Date
+        quality: Appréciation
+        ects: ECTS
+        year: Année
+  simple_form:
+    placeholders:
+      certificate:
+        name: Master ; Licence Professionnelle...
+        diplom_kind: Sciences Humaines et Sociales ; Droit, économie, gestion...
+        diplom_mention: Humanités numériques ; Métiers du commerce international...
+        diplom_path: Dispositifs numériques éducatifs ; Commerce international en PME...
+        quality: Assez bien ; Bien...
+        ects: 60 ; 120...
+        year: 2021-2022 ; 2022-2023
