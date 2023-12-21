@@ -1,3 +1,64 @@
-<h1>La blockchain pour sécuriser</h1>
+<h1>Diplômes Low Tech</h1>
 
-<%= link_to "Créer un certificat", new_certificate_path %>
+<div class="row">
+  <div class="col-lg-6">
+    <h2>Comprendre le contexte</h2>
+
+    <p>
+    Le 19 décembre 2023, <a href="https://www.linkedin.com/in/perrine-de-coetlogon/" target="_blank">Perrine de Coëtlogon</a>, Open Education & Digital Identity Officer chez Open Education Global, publie sur le réseau LinkedIn <a href="https://www.linkedin.com/feed/update/urn:li:activity:7142536510578323457/" target="_blank">le post suivant</a>, avec un lien vers un <a href="https://www.univ-lille.fr/fileadmin/user_upload/presse/2023/Communiques/CPVECTOR.pdf" target="_blank">communiqué de presse</a>.
+    </p>
+    
+    <%= image_tag 'linkedin.png', class: 'img-fluid img-thumbnail' %>
+    
+    <p>
+    Dans les commentaires, plusieurs personnes manifestent leur atterrement à l'idée que de l'argent public soit dépensé pour mettre en place une solution à base de blockchain afin que des Universités puissent partager des diplômes certifiés.
+    Ce démonstrateur a pour objectif de rendre le propos aussi clair que possible.
+    </p>
+    
+    <h2>Le problème</h2>
+    <p>
+      La blockchain est une solution technique permettant, en théorie, de créer de la confiance dans un contexte de défiance généralisé.
+      Mais dans la pratique, la blockchain ne permet pas de créer cette confiance, elle est uniquement mise en œuvre pour obtenir des subventions publiques et des fonds privés.</p>
+    </p>
+    
+    <h2>Le démonstrateur</h2>
+    <p>
+      L'application Web sur laquelle vous lisez ce texte a été développée en 2 heures le 21 décembre.
+      Elle s'appuie sur une base PostgreSQL avec une seule table.
+      Le code HTML, CSS et JS du diplôme "sécurisé" a été simplement copié-collé.
+      Les textes ont été changés afin de se connecter aux données de la base, et mentionner qu'il s'agit d'un non-certificat.
+    </p>
+
+    <h2>La solution</h2>
+
+    <p>
+      La confiance provient de deux mécanismes : l'État et les noms de domaines. 
+      L'État, parce que c'est la base de la loi.
+      Les noms de domaines, parce qu'ils permettent de s'assurer de l'identité d'une personne.
+      L'Université de Lille le sait très bien, comme on le voit dans la capture d'écran ci-dessous, issue de <a href="https://www.univ-lille.fr/formation/diplomation" target="_blank">la page détaillant la diplomation</a>.
+      Le nom de domaine est le premier critère d'authenticité. 
+    </p>
+
+    <%= image_tag 'authenticite.png', class: 'img-fluid img-thumbnail' %>
+
+    <p>
+      Les Universités n'ont pas besoin de gadgets technologiques pour êtres tiers de confiance.
+      Il suffit de s'appuyer sur le nom de domaine.
+    </p>
+
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://github.com/arnaudlevy/lowtechdiploma" target="_blank">https://github.com/arnaudlevy/lowtechdiploma</a></li>
+      <li><a href="https://www.editionsdivergences.com/livre/no-crypto-ideologie-et-populisme-au-royaume-des-cryptomonnaies" target="_blank">No Crypto. Comment Bitcoin a envoûté la planète. (Nastasia Hadjadji)</a></li>
+      <li><a href="https://journals.openedition.org/terminal/9059" target="_blank">Promesses et (dés)illusions, Une introduction technocritique aux blockchains (Pablo Rauzy)</a></li>
+      <li><a href="https://publications.arnaudlevy.com/actualites/2021-05-28-qui-verdira-la-blockchain/" target="_blank">Qui verdira la blockchain? (Arnaud Levy)</a></li>
+      <li><a href="https://publications.arnaudlevy.com/actualites/2019-09-05-qui-detruira-la-blockchain/" target="_blank">Qui détruira la blockchain? (Arnaud Levy)</a></li>
+      <li><a href="" target="_blank"></a></li>
+    </ul>
+
+  </div>
+  <div class="col-lg-4">
+    <h2>Expérimenter</h2>
+    <%= link_to "Créer un non-certificat", new_certificate_path, class: 'btn btn-primary' %>
+  </div>
+</div>

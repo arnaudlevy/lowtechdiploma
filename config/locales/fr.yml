@@ -10,6 +10,11 @@ fr:
         quality: Appréciation
         ects: ECTS
         year: Année
+        first_name: Prénom
+        last_name: Nom
+        birth_date: Date de naissance
+        birth_place: Lieu de naissance
+        ine: Numéro INE
   simple_form:
     placeholders:
       certificate:
@@ -19,4 +24,5 @@ fr:
         diplom_path: Dispositifs numériques éducatifs ; Commerce international en PME...
         quality: Assez bien ; Bien...
         ects: 60 ; 120...
-        year: 2021-2022 ; 2022-2023
+        year: 2021-2022 ; 2022-2023...
+        birth_place: Ville (PAYS)
