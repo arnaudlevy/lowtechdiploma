@@ -1,4 +1,11 @@
-<svg id="bg-lille" xmlns="http://www.w3.org/2000/svg" width="496" height="517" viewBox="0 0 496 517">
-  <rect id="Rectangle_6735" data-name="Rectangle 6735" width="496" height="517" fill="#fff"/>
-  <path id="Tracé_22102" data-name="Tracé 22102" d="M288.038,204.027V.315H235.414V240.227c0,8.056,6.037,13.394,13.442,13.394H397.937l22.215-49.594ZM195.551,417.16c-90.312,0-138.83-46.189-138.83-143.452V.315H0V279.723C0,399.115,69.474,470.836,179.381,470.836h119.47l24.264-53.676Zm20.276-107.93c-27.672,0-42.482-13.394-42.482-41.537V.315H118.681V269.734c0,58.327,34.388,91.817,94.408,91.817H348.738l23.575-52.321Z" transform="translate(38 0.164)" fill="#cc4b51" opacity="0.1"/>
+<svg width="496" height="517" viewBox="0 0 496 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_41)">
+<path d="M496 0H0V517H496V0Z" fill="white"/>
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M273.414 474H326.038V0.479004H273.414V474ZM38 474H94.721V0.479004H38V474ZM211.345 474V0.479004H156.681V474H211.345Z" fill="#CC4B51"/>
+</g>
+<defs>
+<clipPath id="clip0_1_41">
+<rect width="496" height="517" fill="white"/>
+</clipPath>
+</defs>
 </svg>
