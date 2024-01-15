@@ -7,6 +7,52 @@
   À l'Université de Lille, on a un peu de mal à l'accepter...
 </p>
 
+
+<h2>Droit de réponse</h2>
+
+<p>
+  Samedi 13 janvier, j'ai reçu un avis de passage du facteur et je suis allé chercher le courrier à la Poste aujourd'hui, lundi 15. 
+  La société BCDiploma demande un droit de réponse et pour me le faire savoir, elle utilise un dispositif assurant la confiance de basse intensité technologique : le courrier recommandé avec avis de réception. 
+  Voilà <%= link_to 'le courrier en question', asset_path('ar-bcdiploma.pdf'), target: :_blank %>.
+  Évidemment, je publie leur réponse avec plaisir, le débat est ouvert.
+  Je remarque avec amusement que Luc Jarry-Lacombe, président de BCDiploma, a choisi La Poste et la Loi française pour défendre les intérêts de son entreprise.
+  Comme quoi, le bon sens a de l'avenir...
+  Ci-dessous, le texte que BCDiploma souhaite publier.
+</p>
+
+<p class="bg-white p-3">
+  BCdiploma, solution de diplômes et attestations numériques, partenaire de l'Université de Lille dans les projets Dem-Attest et EBSI-VECTOR, dénonce la validité du raisonnement présenté sur cette page. La qualification <i>gadget technologique</i> est fausse. Le projet a permis l'automatisation de l'envoi et de la vérification des attestations de diplômes, avec des gains avérés pour les équipes de l'Université et les étudiants : 70% des étudiants trouvent l'attestation utile pour une candidature, 29% l'ont utilisée et 66% sont fiers de cette innovation (enquête 2023 - 2000 étudiants). Le fait que toute page web puisse être recopiée sur un autre domaine web est une banalité appelée phishing, utilisée pour des escroqueries. Cela ne prouve pas que la blockchain est inutile pour sécuriser une page officielle. Pour être valide, une attestation émise par l'Université de Lille doit être consultée sur une adresse <<diplome-certificat.univ-lille.fr>>. Ce critère est accessible à tous sur le site de l'Université et sur la blockchain, permettant une vérification immédiate et automatisée. La sécurité des données affichées est assurée par la blockchain. La méthode de stockage long terme, à valeur probante, respectueuse du RGPD, apportant une réponse opérationnelle à grande échelle aux universités, est brevetée (US20200099511A1). L'usage des dernières générations de blockchain garantit un impact énergétique faible et un stockage long terme écologiquement responsable. La blockchain permet la mise à disposition d'attestations de diplômes à valeur probante, consultables à la demande 24/7 pendant de nombreuses années. Affirmer qu'un développement informatique rapide pourrait assurer ce service se heurte à la réalité de l'absence de solution de ce type déployée à grande échelle à ce jour. Pour réfléchir de façon documentée aux questions soulevées par cette page, une FAQ est accessible ici : <a href="https://www.bcdiploma.com/fr/faqBcdiploma" target="_blank">https://www.bcdiploma.com/fr/faqBcdiploma</a>.
+</p>
+
+<p>
+  Cette réponse est intéressante à plus d'un titre. 
+</p>
+<p>
+  D'abord, BCDiploma affirme que le raisonnement est invalide parce qu'il s'agit en fait de phishing. Or, il se trouve que le raisonnement que je présente ci-dessous affirme justement que la blockchain ne permet pas de lutter contre le phishing. Si une personne souhaite vérifier la validité d'un diplôme, par exemple un recruteur ou une recruteuse, la blockchain ne l'aide pas, il faut passer par un validateur qui est un service Web fourni par BCDiploma. Ainsi, BCDiploma, une petite entreprise privée, devient de facto le tiers de confiance d'une Université française. Et ce que permet la blockchain dans ce cas, ce n'est pas de faciliter la vérification de l'authenticité des diplômes, mais d'empêcher l'Université de falsifier ses propres diplômes. Est-ce bien utile ?
+</p>
+<p>
+  Passons sur l'automatisation, qui n'a rien à voir avec la blockchain puisque c'est la propriété d'un système informatique que d'automatiser. D'ailleurs, l'auteur le sait bien, puisqu'il écrit que "Le projet a permis l'automatisation". Ce projet a certainement plein d'effets bénéfiques, je ne critique que l'usage de la blockchain dans ce contexte.  
+</p>
+<p>
+  Passons aussi sur la satisfaction, même si je suis bien content qu'ils et elles soient contentes. 
+</p>
+<p>
+  L'argument développé ensuite est précisément celui que je défends, la confiance s'appuie sur le nom de domaine. 
+</p>
+<p>
+  Suit une mention du brevet <a href="https://patents.google.com/patent/US20200099511A1/en" target="_blank">US20200099511A1</a>, déposé aux USA en 2018 et étendu en 2019 au Canada, à Singapour, à la Chine, à la Corée du Sud, à Israël, à l'Espagne, à l'Europe (EPO) et à l'international (WIPO PCT) par Luc Jarry-Lacombe et Vincent Langard. L'étendue du dépôt montre, d'une part, qu'il n'est pas question pour l'entreprise de libérer la technologie en open source pour l'intérêt général, comme l'avait fait Volvo pour la ceinture de sécurité, et d'autre part que ses ambitions ne sont pas limitées à la France, ni même à l'Europe. 
+</p>
+<p>
+  La phrase suivante fait la promotion de la qualité écologique de cette blockchain, ce qui est certainement juste si on la compare à d'autres blockchains. 
+</p>
+<p>
+  Enfin, le "coup de grâce" de ce droit de réponse, c'est que d'après BCDiploma, il n'existe pas de solution de ce type déployée à grande échelle. Cela me permet donc de citer <a href="https://annuaire-entreprises.data.gouv.fr/" target="_blank">l'annuaire des entreprises de data.gouv</a>, qui référence toutes les entreprises françaises et sert de tiers de confiance pour un tout petit peu plus que les 56.000 diplômes intégrés dans la blockchain de BCDiploma... En effet, l'annuaire référence toutes les entreprises ayant existé depuis la création du fichier SIRENE en 1973. Les données sont <a href="https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/" target="_blank">disponibles en open data</a> et le fichier "StockEtablissementHistorique.csv" compte 84 millions d'entrées au 1er janvier 2024. L'application front est développée en Next.js par 19 contributeurs et contributrices, sous licence MIT, et le code est disponible sur <a href="https://github.com/etalab/annuaire-entreprises-site" target="_blank">github.com/etalab/annuaire-entreprises-site</a>. Cette application interroge une API qui est développée en Python par 3 contributeurs, dont le code est disponible sur <a href="https://github.com/etalab/annuaire-entreprises-search-api" target="_blank">github.com/etalab/annuaire-entreprises-search-api</a> et qui s'appuie, pour le traitement des données, sur ElasticSearch. ElasticSearch est une solution sous Server Side Public License, qui s'appuie sur Apache Lucene, un logiciel libre dont le développement a commencé en 1999. Il existe donc une solution assurant la confiance, à valeur probante, déployée à très grande échelle, consultable à la demande 24/7 pendant de nombreuses années, respectueuse du RGPD. Et cette solution est appuyée sur des technologies relativement simples, sous licence libre, et utilise des données ouvertes. C'est la voie à suivre, à mon sens. 
+</p>
+
+<p>
+  J'en profite pour témoigner mon admiration et ma gratitude à l'équipe Etalab, qui donne corps avec intelligence et efficacité à un numérique d'intérêt général, porté par l'État français. Bravo et merci !
+</p>
+
 <h2>Expérimenter</h2>
 <%= link_to "Voir un non-certificat", Certificate.first, class: 'btn btn-primary mb-3' %>
 <%= link_to "Créer un non-certificat", new_certificate_path, class: 'btn btn-primary mb-3' %>
@@ -101,9 +147,9 @@
 <h2>Et après ?</h2>
 
 <p>
-  Il serait bon d'arrêter de financer tous ces projets inutiles sur de la blockchain, ça ne rime à rien dans la plupart des cas. 
-  En revanche, augmenter les budgets des Universités et financer une recherche libre serait extrêmement souhaitable.
-  Ainsi que démarrer la discussion démocratique sur la technique qui permettrait de faire atterrir le numérique, à l'Université comme ailleurs, en dénumérisant.
+Il serait bon d'arrêter de financer tous ces projets inutiles sur de la blockchain, ça ne rime à rien dans la plupart des cas. 
+En revanche, augmenter les budgets des Universités et financer une recherche libre serait extrêmement souhaitable.
+Ainsi que démarrer la discussion démocratique sur la technique qui permettrait de faire atterrir le numérique, à l'Université comme ailleurs, en dénumérisant.
 </p>
 
 <h2>En savoir plus</h2>
